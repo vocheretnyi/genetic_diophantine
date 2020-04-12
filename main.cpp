@@ -32,9 +32,13 @@ int main() {
 
     auto ans = population.GetAnswer();
 
-    for (int x : ans) {
-        cout << x << ' ';
+    for (int i = 0; i < ans.size(); ++i) {
+        cout << ans[i]  << "*"  << coeffs[i];
+        if (i + 1 != ans.size()) {
+            cout << " + ";
+        }
     }
+    cout << " = " << result << "\n";
 
     return 0;
 }
